@@ -19,7 +19,10 @@
           ];
 
           nativeBuildInputs = jdks ++ [ pkgs.gradle ];
-          buildInputs = [ ];
+          buildInputs = [
+            pkgs.libGL
+            pkgs.pulseaudio
+          ];
         in
         {
 

@@ -1,8 +1,12 @@
 {
   "required": true,
-  "package": "me.wawwior.levelless_enchantments.mixin",
+  "package": "me.wawwior.levelless.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "EnchantmentMixin",
+    "ItemEnchantmentsMixin",
+    "ItemEnchantmentsMutableMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
