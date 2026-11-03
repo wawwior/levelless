@@ -8,10 +8,10 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(ItemEnchantments.Mutable.class)
-public class ItemEnchantmentsMutableMixin {
+public abstract class ItemEnchantmentsMutableMixin {
 
     @ModifyReturnValue(method = "getLevel", at = @At("RETURN"))
-    private int levelless$getLevel(int original, Holder<Enchantment> holder) {
+    private int levelless$returnMaxLevel(int original, Holder<Enchantment> holder) {
         return original > 0 && holder.isBound() ? holder.value().getMaxLevel() : original;
     }
 

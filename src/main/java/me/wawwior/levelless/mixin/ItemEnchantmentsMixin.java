@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Mixin(ItemEnchantments.class)
-public class ItemEnchantmentsMixin {
+public abstract class ItemEnchantmentsMixin {
 
     @Unique
     private Set<Object2IntMap.Entry<Holder<Enchantment>>> levelless$cachedSet;
